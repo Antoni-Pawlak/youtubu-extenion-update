@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid">
+            <div class="menubar">
+                <a href="#"><h2 class="logo-text">Watcher</h2></a>
+                <a href="#" class="humburger">
+                    <span class="humburger-lg"></span>
+                    <span class="humburger-sm"></span>
+                    <span class="humburger-lg"></span>
+                    <span class="humburger-sm"></span>
+                </a>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Faqs</a></li>
+                    <li><button href="#" class="btn-round bg-red">Log In with Google</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-wraper">
+                    <div class="hero-text">
+                        <h1>Welcome to our home page</h1>
+                        <ul class="hero-list">
+                            <li><i class="fa fa-check-circle" aria-hidden="true"></i> Lorem ipsum, or lipsum as it is sometimes known, </li>
+                            <li><i class="fa fa-check-circle" aria-hidden="true"></i> Is dummy text used in laying out sed in laying out print, graphic or web designs.</li>
+                            <li><i class="fa fa-check-circle" aria-hidden="true"></i> The passage is attributed to an unknown</li>
+                        </ul>
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print.</p>
+                        <a href="#" class="btn-round">Sign In with Google</a>
+                    </div>
+                    <div class="hero-video">
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/U6m_7YAcJEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>Copyright 2023 .All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".humburger").on('click', function() {
+                $('header').toggleClass('sidenav-toggled');
+            });
+        });
+    </script>
+
+</body>
+</html>
