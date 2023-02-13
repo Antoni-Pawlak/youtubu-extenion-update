@@ -12,8 +12,7 @@ class GoogleController extends Controller
 {
     public function loginWithGoogle()
     {
-        return  Socialite::driver('google')->with(["prompt" => "select_account"])->redirect();
-        // return Socialite::driver('google')->redirect();
+        return Socialite::driver('google')->redirect();
     }
 
     public function callbackFromGoogle()
@@ -23,16 +22,16 @@ class GoogleController extends Controller
 
             // Check Users Email If Already There
             $is_user = false; // User::where('email', $user->getEmail())->first();
-            if(!$is_user){
+            if (!$is_user) {
 
                 $saveUser = User::updateOrCreate([
                     'google_id' => $user->getId(),
-                ],[
+                ], [
                     'name' => $user->getName(),
                     'email' => $user->getEmail(),
-                    'password' => Hash::make($user->getName().'@'.$user->getId())
+                    'password' => Hash::make($user->getName() . '@' . $user->getId())
                 ]);
-            }else{
+            } else {
                 $saveUser = User::where('email',  $user->getEmail())->update([
                     'google_id' => $user->getId(),
                 ]);
@@ -46,5 +45,16 @@ class GoogleController extends Controller
         } catch (\Throwable $th) {
             throw $th;
         }
+    }
+
+    public function inviteWithGoogle(Request $request)
+    {
+
+        $user = User::find($request->id);
+        if ($user) {
+            $user->points = !empty($user->points) ? $user->points + 50 : 50;
+            $user->save();
+        }
+        return Socialite::driver('google')->redirect();
     }
 }

@@ -31,9 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => '1066374004315-8fsmk8sfokkedu3gkc1kmhd2gufhp2kc.apps.googleusercontent.com', //USE FROM Google DEVELOPER ACCOUNT
-        'client_secret' => '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', //USE FROM Google DEVELOPER ACCOUNT
+        'client_id' => '1066374004315-rb2jpt9k1fd0lnl96cj51jc61kbs9qhk.apps.googleusercontent.com', //USE FROM Google DEVELOPER ACCOUNT
+        'client_secret' => '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', //USE FROM Google DEVELOPER ACCOUNT
         'redirect' => 'http://laravel.co/google/callback'
-],
+    ],
 
 ];
